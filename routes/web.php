@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/AllProducts', function () {
+//     return view('AllProducts');
+// });
+// Route::get('/AllProducts', [ProductController::class, 'index'])->name('AllProducts');
+Route::resource('/Products', ProductController::class, ['names' => 'Products']);
+Route::get('/AllProducts', [ProductController::class, 'allProductSubmit'])->name('AllProducts');
+Route::get('/searchProducts', [ProductController::class, 'searchProducts'])->name('searchProducts');
+Route::get('/filter-products', [ProductController::class, 'filterProducts'])->name('/filter-products');
+// Route::get('/filter-products', 'ProductController@filterProducts');
+
+Route::get('/login', function () {
+    return view('login');
+});
+

@@ -27,5 +27,7 @@ Route::get('/searchProducts', [ProductController::class, 'searchProducts'])->nam
 Route::get('/filter-products', [ProductController::class, 'filterProducts'])->name('/filter-products');
 // Route::get('/filter-products', 'ProductController@filterProducts');
 
-
+Route::get('/login', function () {
+    return view('login');
+});
 

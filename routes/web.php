@@ -15,7 +15,7 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 // Route::get('/AllProducts', function () {
 //     return view('AllProducts');
@@ -24,10 +24,10 @@ Route::get('/', function () {
 Route::resource('/Products', ProductController::class, ['names' => 'Products']);
 Route::get('/AllProducts', [ProductController::class, 'allProductSubmit'])->name('AllProducts');
 Route::get('/searchProducts', [ProductController::class, 'searchProducts'])->name('searchProducts');
-Route::get('/filter-products', [ProductController::class, 'filterProducts'])->name('/filter-products');
+Route::get('/filter-products', [ProductController::class, 'filterProducts'])->name('filter-products');
 // Route::get('/filter-products', 'ProductController@filterProducts');
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
 

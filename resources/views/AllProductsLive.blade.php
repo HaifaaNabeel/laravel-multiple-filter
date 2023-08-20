@@ -51,6 +51,37 @@
         </style>
     </head>
     <body class="antialiased">
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div>
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('AllProducts')}}" class="underline text-gray-900 dark:text-white">Products filter 1</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('Products.index')}}" class="underline text-gray-900 dark:text-white">Products filter 2</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('login')}}" class="underline text-gray-900 dark:text-white">Login</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('home')}}" class="underline text-gray-900 dark:text-white">Home</a></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div class="Products-wrap">
                 <div class="filters">
@@ -86,7 +117,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             // filter and search by ajax
-            
+
         </script>
     </body>
 </html>
